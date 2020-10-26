@@ -11,15 +11,15 @@ class Sort{
     run() {
         for (let i = 0; i < this.sortArr.length-1; i++) {
             for (let j = 0; j < this.sortArr.length-1; j++) {
-                 if(this.sortArr[j] < this.sortArr[j+1]) {
+                 if(this.sortArr[j] > this.sortArr[j+1]) {
                     this.tempValue    = this.sortArr[j];
                     this.sortArr[j]   = this.sortArr[j+1];
                     this.sortArr[j+1] = this.tempValue;
                  }
              }        
-         }
+        }
         return this.sortArr;
-    }   
+    }
 }
 let result = new Sort(list);
-console.log(result);
+console.log(result.run());
