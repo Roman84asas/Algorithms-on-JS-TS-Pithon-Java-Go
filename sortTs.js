@@ -1,16 +1,21 @@
 var list = [4, 1, 3, 22, 7];
-function sort(array) {
-    var sortArr = array;
-    var tempValue = 0;
-    for (var i = 0; i < sortArr.length - 1; i++) {
-        for (var j = 0; j < sortArr.length - 1; j++) {
-            if (sortArr[j] < sortArr[j + 1]) {
-                tempValue = sortArr[j];
-                sortArr[j] = sortArr[j + 1];
-                sortArr[j + 1] = tempValue;
+var Sort = /** @class */ (function () {
+    function Sort(sortArr) {
+        this.sortArr = sortArr;
+    }
+    Sort.prototype.run = function () {
+        for (var i = 0; i < this.sortArr.length - 1; i++) {
+            for (var j = 0; j < this.sortArr.length - 1; j++) {
+                if (this.sortArr[j] < this.sortArr[j + 1]) {
+                    this.tempValue = this.sortArr[j];
+                    this.sortArr[j] = this.sortArr[j + 1];
+                    this.sortArr[j + 1] = this.tempValue;
+                }
             }
         }
-    }
-    return sortArr;
-}
-console.log(sort(list));
+        return this.sortArr;
+    };
+    return Sort;
+}());
+var result = new Sort(list);
+console.log(result);
