@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func DuubleSort(Args []int) []int {
+func duubleSort(Args []int) []int {
 	var sortArr = Args
 	var tempVal int
 	for i := 0; i < len(sortArr)-1; i++ {
@@ -19,6 +19,6 @@ func DuubleSort(Args []int) []int {
 
 func main() {
 	var arr []int = []int{4, 1, 3, 22, 7}
-	var result []int = DuubleSort(arr)
+	var result []int = duubleSort(arr)
 	fmt.Println(result)
 }
