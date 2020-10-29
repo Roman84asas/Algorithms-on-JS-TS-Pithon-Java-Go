@@ -2,12 +2,12 @@ let arr = [4, 1, 3, 22, 7];
 
 function selectionSort(array) {
     let tempArr = array;
-    let countArr = tempArr.length - 1;
+    let countArr = tempArr.length;
     let tempVal = 0;
 
      for (let i = 0; i < countArr; i++) {
          let minVal = i;
-        for (let j = 0+1; j < countArr; j++) {
+        for (let j = minVal+1; j < countArr; j++) {
             if(tempArr[j] < tempArr[minVal]) {
                 minVal = j;
             }
