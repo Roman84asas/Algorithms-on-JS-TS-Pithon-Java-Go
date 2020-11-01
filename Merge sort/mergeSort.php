@@ -18,22 +18,18 @@ function merge($left, $right){
     
 	while (count($left) > 0 && count($right) > 0){
 		if($left[0] > $right[0]){
-			$result[] = $right[0];
-			$right = array_slice($right , 1);
+            list($result[], $right) = array($right[0], array_slice($right , 1));
 		}else{
-			$result[] = $left[0];
-			$left = array_slice($left, 1);
+            list($result[], $left) = array($left[0], array_slice($left , 1));
 		}
     }
     
 	while (count($left) > 0){
-		$result[] = $left[0];
-		$left = array_slice($left, 1);
+        list($result[], $left) = array($left[0], array_slice($left , 1));
     }
     
 	while (count($right) > 0){
-		$result[] = $right[0];
-		$right = array_slice($right, 1);
+		list($result[], $right) = array($right[0], array_slice($right , 1));
     }
     
 	return $result;
