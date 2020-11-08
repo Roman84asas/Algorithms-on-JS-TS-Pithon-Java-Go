@@ -4,7 +4,7 @@ class SelectionSort:
     def __init__(self, array):
         self.array = array
 
-    def selection_sort(self, data: List[int]) -> List[int]:
+    def selection_sort(self) -> List[int]:
         for i, e in enumerate(self.array):
             mn = min(range(i, len(self.array)), key=self.array.__getitem__)
             self.array[i], self.array[mn] = self.array[mn], e
