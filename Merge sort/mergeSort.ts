@@ -9,8 +9,7 @@ function merge(left: number[], right: number[]): number[] {
             result.push(left[0]);
             left = left.slice(1);
         }
-    }
-   
+    }   
     
    while (left.length > 0){
         result.push(left[0]);

@@ -23,8 +23,7 @@ class SelectionSort {
            this.tempArr[minVal] = this.tempValue;
        } 
        return this.tempArr;
-    }
-     
+    }     
 }
-const selectionSort = new SelectionSort(arr);
+const selectionSort: SelectionSort = new SelectionSort(arr);
 console.log(selectionSort.run());

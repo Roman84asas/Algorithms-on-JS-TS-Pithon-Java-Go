@@ -1,6 +1,6 @@
 const list: number[] = [4, 1, 3, 22, 7];
 
-class Sort{
+class Sort {
     sortArr: number[];
     tempValue: number;
 
@@ -21,5 +21,5 @@ class Sort{
         return this.sortArr;
     }
 }
-let result = new Sort(list);
+let result: Sort = new Sort(list);
 console.log(result.run());

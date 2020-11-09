@@ -22,5 +22,5 @@ class InsertionSort {
 }
 
 const sort_array = [5, 22, 8, 15, 1, 3];
-const result_array = new InsertionSort(sort_array);
+const result_array: InsertionSort = new InsertionSort(sort_array);
 console.log(result_array.run());
